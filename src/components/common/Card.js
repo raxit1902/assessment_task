@@ -8,7 +8,7 @@ const Card = ({ jobData }) => {
         jobData.map((item) => (
           <div className='bg-white rounded py-4 px-6 div-card'>
             <div className='flex gap-2'>
-                <img src={cardImg} />
+                <img src={cardImg} alt='card-img' />
               <div className='text-left'>
                 <div className='mb-6'>
                   <h2 className='text-2xl'>{item.jobTitle}</h2>
