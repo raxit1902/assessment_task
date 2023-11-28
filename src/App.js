@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import CreateJobForm from './components/CreateJobForm';
 import JobCard from './components/JobCard';
 
 const App = () => {
-  const [step, setStep] = useState(1)
-  const [jobData, setJobData] = useState([])
+  const [step, setStep] = useState(1);
+  const [jobData, setJobData] = useState([]);
+
+  useEffect(() => {
+    const Data = JSON.parse(localStorage.getItem("JobData"));
+    setJobData(Data);
+  },[]);
 
   const handleNextStep = () => {
     setStep((prevStep) => prevStep + 1)
   }
 
   const handleSaveJob = (data) => {
-    const newArray = jobData
+    const newArray = jobData || [];
     newArray.push(data)
-    setJobData(newArray)
+    localStorage.setItem('JobData', JSON.stringify(newArray));
     setStep(3)
   }
 
