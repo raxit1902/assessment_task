@@ -4,7 +4,7 @@ import cardImg from '../../assets/Netflix-Symbol.png'
 const Card = ({ jobData }) => {
   return (
     <>
-      {jobData &&
+      {jobData && jobData !== null &&
         jobData.map((item) => (
           <div className='bg-white rounded py-4 px-6 div-card'>
             <div className='flex gap-2'>

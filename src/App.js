@@ -7,11 +7,6 @@ const App = () => {
   const [step, setStep] = useState(1);
   const [jobData, setJobData] = useState([]);
 
-  useEffect(() => {
-    const Data = JSON.parse(localStorage.getItem("JobData"));
-    setJobData(Data);
-  },[]);
-
   const handleNextStep = () => {
     setStep((prevStep) => prevStep + 1)
   }
@@ -22,6 +17,11 @@ const App = () => {
     localStorage.setItem('JobData', JSON.stringify(newArray));
     setStep(3)
   }
+
+  useEffect(() => {
+    const Data = JSON.parse(localStorage.getItem("JobData"));
+    setJobData(Data);
+  },[step]);
 
   return (
     <div className='App'>
