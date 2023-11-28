@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './createJobFrom.css';
-import InputField from './common/InputField';
+import React, { useState } from 'react'
+import './createJobFrom.css'
+import InputField from './common/InputField'
 
 const CreateJobForm = ({ onSave, onNext, step }) => {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ const CreateJobForm = ({ onSave, onNext, step }) => {
   }
 
   return (
-    <div className='flex flex-col justify-between bg-white p-8 rounded-md form-main-div'>
+    <div className='flex flex-col justify-between bg-white p-8 m-6 rounded-md form-main-div'>
       <div className='flex flex-col gap-6'>
         <div className='flex justify-between'>
           <p className='text-2xl font-medium'>Create a job</p>
@@ -160,7 +160,6 @@ const CreateJobForm = ({ onSave, onNext, step }) => {
                 />
               </div>
             </div>
-
           </>
         )}
       </div>
@@ -187,4 +186,4 @@ const CreateJobForm = ({ onSave, onNext, step }) => {
   )
 }
 
-export default CreateJobForm;
+export default CreateJobForm

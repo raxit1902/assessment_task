@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import cardImg from '../../assets/Netflix-Symbol.png'
 
 const Card = ({ jobData }) => {
@@ -8,7 +8,11 @@ const Card = ({ jobData }) => {
         jobData.map((item) => (
           <div className='bg-white rounded py-4 px-6 div-card'>
             <div className='flex gap-2'>
-                <img src={cardImg} alt='card-img' />
+              <img
+                src={cardImg}
+                alt='card-img'
+                className='w-20 h-20 rounded-lg'
+              />
               <div className='text-left'>
                 <div className='mb-6'>
                   <h2 className='text-2xl'>{item.jobTitle}</h2>
@@ -22,7 +26,8 @@ const Card = ({ jobData }) => {
                 <div className='mb-6'>
                   <p className='mb-2'>part-Time (9.00am - 5.00pm IST) </p>
                   <p className='mb-2'>
-                    Experience ({item.experienceMin} - {item.experienceMax} years)
+                    Experience ({item.experienceMin} - {item.experienceMax}{' '}
+                    years)
                   </p>
                   <p className='mb-2'>
                     INR (₹) {item.salaryMin} - {item.salaryMax} / month
@@ -48,4 +53,4 @@ const Card = ({ jobData }) => {
   )
 }
 
-export default Card;
+export default Card

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const InputField = ({
   label,
@@ -49,4 +49,4 @@ const InputField = ({
   )
 }
 
-export default InputField;
+export default InputField
